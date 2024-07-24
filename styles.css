@@ -42,6 +42,8 @@
     --header-height:56px;
     --z-tooltip:25;
     --z-fixed:100;
+    --border-radius:2px;
+    --transition-time:0.25s;
 }
 
 body{
@@ -93,6 +95,10 @@ img{
     z-index: var(--z-fixed);
 }
 
+.main-header .start .action-button{
+    margin-right: 1rem;
+}
+
 .main-header .logo{
     width: 6rem;
 }
@@ -123,7 +129,7 @@ img{
     border: 1px solid transparent;
     background: none;
     cursor:pointer;
-    transition: border-color 0.25s;
+    transition: border-color var(--transition-time);
 }
 
 .action-button::before{
@@ -134,5 +140,34 @@ img{
 .action-button:active{
     background-color: var(--bg-color-active) ;
     border-color: var(--bg-color-active);
+}
+
+/* Tooltip */
+/*  */
+[data-tooltip]{
+    position: relative;
+}
+
+[data-tooltip]:hover::after{
+    opacity: 1;
+}
+
+[data-tooltip]::after{
+    content: attr(data-tooltip);
+    position: absolute;
+    left: 50%;
+    top: 3rem;
+    transform: translateX(-50%);
+    padding: 0.5rem;
+    background-color: var(--text-color-alt);
+    color: var(--text-color-white);
+    font-family: var(--body-font);
+    font-size: var(--smaller-font-size);
+    border-radius: var(--border-radius);
+    white-space: nowrap;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity var(--transition-time);
+    z-index: var(--z-tooltip);
 }
 
