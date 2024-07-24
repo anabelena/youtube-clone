@@ -36,6 +36,12 @@
     --smaller-font-size:0.75rem; /*12px*/
 
     --font-bold:500;
+
+    /* Others */
+
+    --header-height:56px;
+    --z-tooltip:25;
+    --z-fixed:100;
 }
 
 body{
@@ -60,3 +66,17 @@ img{
     width: 100%;
 }
 
+/* MAIN HEADER */
+.main-header{
+    position: fixed;
+    width: 100%;
+    left: 0;
+    top: 0;
+    height: var(--header-height);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 1rem;
+    background: red;
+    z-index: var(--z-fixed);
+}
