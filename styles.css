@@ -66,6 +66,18 @@ img{
     width: 100%;
 }
 
+/* FLEX | CENTER elements */
+.place-center{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.buttons-container{
+    display: flex;
+    gap: 0.5rem;
+}
+
 /* MAIN HEADER */
 .main-header{
     position: fixed;
@@ -77,8 +89,12 @@ img{
     justify-content: space-between;
     align-items: center;
     padding: 0 1rem;
-    background: red;
+  
     z-index: var(--z-fixed);
+}
+
+.main-header .logo{
+    width: 6rem;
 }
 
 /* USER AVATAR */
@@ -95,5 +111,28 @@ img{
     width: 100%;
     height: 100%;
     border-radius: 50%;
+}
+
+/* ACTION BUTTONS */
+
+.action-button{
+    --size:2.5rem;
+    height: var(--size);
+    width: var(--size);
+    border-radius: 50%;
+    border: 1px solid transparent;
+    background: none;
+    cursor:pointer;
+    transition: border-color 0.25s;
+}
+
+.action-button::before{
+    color: var(--text-color-alt);
+    font-size: 1.5rem;
+}
+
+.action-button:active{
+    background-color: var(--bg-color-active) ;
+    border-color: var(--bg-color-active);
 }
 
