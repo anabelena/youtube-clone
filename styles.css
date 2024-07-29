@@ -50,6 +50,7 @@
 
 body{
     font-family: var(--body-font);
+    background-color: var(--bg-color-alt);
 }
 
 h1,
@@ -175,6 +176,7 @@ img{
 /* --- SIDEBAR ---- */
 
 .main-sidebar{
+    --main-nav-padding:0.5rem 1.5rem;
     position: fixed;
     top: var(--header-height);
     height: calc(100vh - var(--header-height));
@@ -182,4 +184,37 @@ img{
     background-color: var(--bg-color);
     padding: 0.75rem 0;
     overflow: auto;
+}
+
+/* NAVIGATION ITEMS*/
+.main-nav .link{
+    display: flex;
+    align-items: center;
+    padding: var(--main-nav-padding);
+    color: var(--text-color);
+    font-size: var(--small-font-size);
+    text-decoration: none;
+    /* background-color: red; */
+}
+
+.main-nav .link.is-active,
+.main-nav .link:hover{
+    background-color: var(--bg-color-alt);
+}
+
+
+.main-nav .link.is-active{
+    font-weight: var(--font-bold);
+
+}
+
+/* SIDEBAR ICONS */
+.main-nav .link .icon{
+    margin-right: 1.5rem;
+    font-size: 1.5rem;
+    color: var(--text-color-alt);
+}
+
+.main-nav .link.link.is-active .icon{
+    color: var(--accent-color);
 }
