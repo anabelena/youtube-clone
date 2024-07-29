@@ -71,6 +71,12 @@ img{
     width: 100%;
 }
 
+hr{
+    --spacing:0.75rem;
+    border: none;
+    border-bottom: 1px solid var(--border-color);
+}
+
 /* FLEX | CENTER elements */
 .place-center{
     display: flex;
