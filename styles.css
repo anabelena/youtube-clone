@@ -40,10 +40,12 @@
     /* Others */
 
     --header-height:56px;
+    --sidebar-width:240px;
     --z-tooltip:25;
     --z-fixed:100;
     --border-radius:2px;
     --transition-time:0.25s;
+    
 }
 
 body{
@@ -91,7 +93,6 @@ img{
     justify-content: space-between;
     align-items: center;
     padding: 0 1rem;
-  
     z-index: var(--z-fixed);
 }
 
@@ -171,3 +172,14 @@ img{
     z-index: var(--z-tooltip);
 }
 
+/* --- SIDEBAR ---- */
+
+.main-sidebar{
+    position: fixed;
+    top: var(--header-height);
+    height: calc(100vh - var(--header-height));
+    width: var(--sidebar-width);
+    background-color: var(--bg-color);
+    padding: 0.75rem 0;
+    overflow: auto;
+}
