@@ -145,6 +145,8 @@ hr{
     font-size: 1.5rem;
 }
 
+/* Por que aplique el estilo de color y fuente a un pseudoelemento y no a la clase action button */
+
 .action-button:active{
     background-color: var(--bg-color-active) ;
     border-color: var(--bg-color-active);
@@ -216,11 +218,46 @@ hr{
 
 /* SIDEBAR ICONS */
 .main-nav .link .icon{
-    margin-right: 1.5rem;
     font-size: 1.5rem;
     color: var(--text-color-alt);
 }
 
+.main-nav .link.is-in-live::after,
+.main-nav .link.is-new::after{
+    content: var(--link-icon);
+    font-family: var(--icon-font);
+    margin-left:auto;
+}
+
+.main-nav .link.is-in-live::after{
+    --link-icon:'\e911';
+    color: var(--accent-color);
+}
+
+.main-nav .link.is-new::after{
+    --link-icon:'\e91b';
+    color: #065fd4;
+    font-size: 0.5rem;
+}
+
+
+.main-nav .link .user-avatar{
+    --size:1.5rem;
+}
+
+.main-nav .link .icon,
+.main-nav .link .user-avatar{
+    margin-right: 1.5rem;
+}
+
 .main-nav .link.link.is-active .icon{
     color: var(--accent-color);
+}
+
+/* SIDEBAR TITLE OF SECTIONS */
+.nav-title{
+    padding: var(--main-nav-padding);
+    text-transform: uppercase;
+    color: var(--text-color-alt);
+    font-size: var(--small-font-size);
 }
