@@ -261,3 +261,25 @@ hr{
     color: var(--text-color-alt);
     font-size: var(--small-font-size);
 }
+
+/* SIDEBAR FOOTER */
+.main-nav-footer{
+    padding: var(--main-nav-padding);
+    display: grid;
+    gap: 0.75rem;
+    font-size:var(--smaller-font-size)
+}
+
+.main-nav-footer .link-footer{
+    margin-right: 0.5rem;
+    line-height: 1.4;
+    text-decoration: none;
+    font-weight: var(--font-bold);
+    color:var(--text-color-alt) ;
+}
+
+.main-nav-footer .copyright{
+    opacity: 0.6;
+    color: var(--text-color-alt);
+    margin: 0;
+}
