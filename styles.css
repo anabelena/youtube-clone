@@ -45,6 +45,14 @@
     --z-fixed:100;
     --border-radius:2px;
     --transition-time:0.25s;
+
+    /* Scroll */
+    --scroll-size:1rem;
+    --scroll-bg:transparent;
+    --scroll-radius:8px;
+    --scroll-padding:4px;
+    --thumb-bg:var(--grey-color);
+    --thumb-bg-alt:var(--grey-color-alt);
     
 }
 
@@ -88,6 +96,43 @@ hr{
     display: flex;
     gap: 0.5rem;
 }
+
+body{
+    min-height: 200vh;
+}
+
+/* SCROLL */
+.scroll::-webkit-scrollbar{
+    /* width afecta al scroll Y */
+    /* height afecta al scroll en X */
+    width: var(--scroll-size);
+    height: var(--scroll-size); 
+}
+
+/* SELECTOR aplica cambios a Scroll de SIDEBAR y BODY */
+.scroll::-webkit-scrollbar-thumb{
+    background-color: var(--thumb-bg);
+    border-radius: var(--scroll-radius);
+    border: var(--scroll-padding) solid transparent;
+    background-clip: content-box;
+}
+
+.scroll::-webkit-scrollbar-thumb:hover{
+    background-color: var(--thumb-bg-alt);
+}
+
+/* SideBar Scroll */
+.scroll:not(body)::-webkit-scrollbar-thumb{
+    display: none;
+    background-color: var(--thumb-bg-alt); 
+    /* cambia color al scroll del sidebar */
+}
+/* Hover SideBar Scroll */
+.scroll:not(body):hover::-webkit-scrollbar-thumb{
+    display: block;
+    /* cuando haga hover el scroll del sidebar sera visible con el color aplicado antes  */
+}
+
 
 /* MAIN HEADER */
 .main-header{
@@ -187,6 +232,8 @@ hr{
     --main-nav-padding:0.5rem 1.5rem;
     position: fixed;
     top: var(--header-height);
+    /* Altura del sidebar sera el view height - el tamano de la cabecera
+    al desbordar el contenido se genera el scroll */
     height: calc(100vh - var(--header-height));
     width: var(--sidebar-width);
     background-color: var(--bg-color);
