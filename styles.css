@@ -156,6 +156,38 @@ body{
     width: 6rem;
 }
 
+.main-header .middle {
+    flex-basis: 720px;
+  
+    padding: 0 2rem;
+}
+
+.main-header .form-search{
+    flex-grow: 1;
+    align-items: stretch;
+}
+
+.main-header .input{
+    flex-grow: 1;
+    padding: 0.5rem;
+    border: 1px solid var(--border-color);
+    border-right: 0;
+    border-radius: var(--border-radius) 0 0 var(--border-radius);
+    cursor: pointer;
+}
+
+.main-header .submit{
+    padding: 0 1.5rem;
+    border: 1px solid var(--border-color);
+    color: var(--text-color-alt);
+    font-size: 1.25rem;
+    border-radius: var(--border-radius) var(--border-radius) 0 0;
+}
+
+.main-header .user{
+    padding: 0 1rem;
+}
+
 /* USER AVATAR */
 
 .user-avatar{
@@ -330,3 +362,4 @@ body{
     color: var(--text-color-alt);
     margin: 0;
 }
+
