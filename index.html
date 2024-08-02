@@ -49,6 +49,7 @@
         </div>
       </div>
     </header>
+
     <div class="main-sidebar scroll">
       <nav class="main-nav">
         <!-- Section 1 -->
@@ -248,7 +249,12 @@
         </footer>
       </nav>
     </div>
-    <main class="card-grid">
+
+    <main class="card-grid" id="card-grid">
+ 
+    </main>
+
+    <template id="video-card">
       <article class="card-video">
         <a href="#" class="cover">
           <img
@@ -256,7 +262,7 @@
             alt="Portada del video"
             class="image"
           />
-          <time class="time">05:50 </time>
+          <time class="time"> 05:50 </time>
         </a>
         <div class="container flex">
           <div class="user-avatar">
@@ -275,115 +281,8 @@
           </div>
         </div>
       </article>
+    </template>
 
-      <article class="card-video">
-        <a href="#" class="cover">
-          <img
-            src="https://images.unsplash.com/photo-1721633616323-e0ea74a488e0?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxmZWF0dXJlZC1waG90b3MtZmVlZHwxOXx8fGVufDB8fHx8fA%3D%3D"
-            alt="Portada del video"
-            class="image"
-          />
-          <time class="time">05:50 </time>
-        </a>
-        <div class="container flex">
-          <div class="user-avatar">
-            <img 
-            class="image" 
-            src="img/user_avatar.png" 
-            alt="User photo" />
-          </div>
-          <div class="content">
-            <h3 class="title"><a href="">Titulo del video</a></h3>
-            <p>Nombre del Usuario</p>
-            <p class="video-information">
-              <span class="views">100.000 Visualizaciones</span>
-              <span> Hace una semana </span>
-            </p>
-          </div>
-        </div>
-      </article>
-
-      <article class="card-video">
-        <a href="#" class="cover">
-          <img
-            src="https://images.unsplash.com/photo-1722353619595-b4761dce43c8?q=80&w=2574&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-            alt="Portada del video"
-            class="image"
-          />
-          <time class="time">05:50 </time>
-        </a>
-        <div class="container flex">
-          <div class="user-avatar">
-            <img 
-            class="image" 
-            src="img/user_avatar.png" 
-            alt="User photo" />
-          </div>
-          <div class="content">
-            <h3 class="title"><a href="">Titulo del video</a></h3>
-            <p>Nombre del Usuario</p>
-            <p class="video-information">
-              <span class="views">100.000 Visualizaciones</span>
-              <span> Hace una semana </span>
-            </p>
-          </div>
-        </div>
-      </article>
-
-      <article class="card-video">
-        <a href="#" class="cover">
-          <img
-            src="https://images.unsplash.com/photo-1722488335644-0ffd022b0715?q=80&w=2564&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-            alt="Portada del video"
-            class="image"
-          />
-          <time class="time">05:50 </time>
-        </a>
-        <div class="container flex">
-          <div class="user-avatar">
-            <img 
-            class="image" 
-            src="img/user_avatar.png" 
-            alt="User photo" />
-          </div>
-          <div class="content">
-            <h3 class="title"><a href="">Titulo del video</a></h3>
-            <p>Nombre del Usuario</p>
-            <p class="video-information">
-              <span class="views">100.000 Visualizaciones</span>
-              <span> Hace una semana </span>
-            </p>
-          </div>
-        </div>
-      </article>
-
-      <article class="card-video">
-        <a href="#" class="cover">
-          <img
-            src="https://images.unsplash.com/photo-1721296357290-989b0751c39f?q=80&w=2574&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-            alt="Portada del video"
-            class="image"
-          />
-          <time class="time">05:50 </time>
-        </a>
-        <div class="container flex">
-          <div class="user-avatar">
-            <img 
-            class="image" 
-            src="img/user_avatar.png" 
-            alt="User photo" />
-          </div>
-          <div class="content">
-            <h3 class="title"><a href="">Titulo del video</a></h3>
-            <p>Nombre del Usuario</p>
-            <p class="video-information">
-              <span class="views">100.000 Visualizaciones</span>
-              <span> Hace una semana </span>
-            </p>
-          </div>
-        </div>
-      </article>
-
-    </main>
+  <script src="js/scripts/cards.js" type="module"> </script>
   </body>
 </html>
