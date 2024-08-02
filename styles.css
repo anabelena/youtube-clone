@@ -60,6 +60,8 @@ body{
     font-family: var(--body-font);
     background-color: var(--bg-color-alt);
     line-height: 1.15rem;
+    padding-top: var(--header-height);
+    padding-left: var(--sidebar-width);
 }
 
 h1,
@@ -267,6 +269,7 @@ hr{
     --main-nav-padding:0.5rem 1.5rem;
     position: fixed;
     top: var(--header-height);
+    left: 0;
     /* Altura del sidebar sera el view height - el tamano de la cabecera
     al desbordar el contenido se genera el scroll */
     height: calc(100vh - var(--header-height));
@@ -274,6 +277,7 @@ hr{
     background-color: var(--bg-color);
     padding: 0.75rem 0;
     overflow: auto;
+    z-index: var(--z-fixed);
 }
 
 /* NAVIGATION ITEMS*/
@@ -367,9 +371,9 @@ hr{
 }
 
 /* ---- Tarjeta de Video */
-.card-video{
+/* .card-video{
     max-width: 300px;
-}
+} */
 
 .card-video a{
     text-decoration: none;
@@ -416,10 +420,6 @@ hr{
 }
 
 /* Informacion del video */
-.video-information{
-
-}
-
 .video-information .views{
     display: inline-flex;
 }
@@ -431,8 +431,12 @@ hr{
     padding: 0 0.25rem; 
 }
 
-/* Ocultar header y nav temporal */
-.main-header,
-.main-sidebar{
-    display: none;
+/* ---- GRID VIDEOS */
+.card-grid{
+    display: grid;
+    /* autofill: insertara tantas columnas como sea posible dependiendo el tamano minimo especificado
+       minmax: el valor minimo de cada columna sera de 300px y el maximo del espacio disponible */
+    grid-template-columns:repeat(auto-fill, minmax(300px,1fr));
+    gap: 2rem 1rem;
+    padding: 1rem 2rem;
 }
