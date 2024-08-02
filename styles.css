@@ -59,6 +59,7 @@
 body{
     font-family: var(--body-font);
     background-color: var(--bg-color-alt);
+    line-height: 1.15rem;
 }
 
 h1,
@@ -92,14 +93,15 @@ hr{
     align-items: center;
 }
 
+.flex{
+    display: flex;
+}
+
 .buttons-container{
     display: flex;
     gap: 0.5rem;
 }
 
-body{
-    min-height: 200vh;
-}
 
 /* SCROLL */
 .scroll::-webkit-scrollbar{
@@ -141,11 +143,12 @@ body{
     left: 0;
     top: 0;
     height: var(--header-height);
+    background-color: var(--bg-color);
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 0 1rem;
-    z-index: var(--z-fixed);
+    z-index: 100;
 }
 
 .main-header .start .action-button{
@@ -281,7 +284,7 @@ body{
     color: var(--text-color);
     font-size: var(--small-font-size);
     text-decoration: none;
-    /* background-color: red; */
+    white-space:nowrap ;
 }
 
 .main-nav .link.is-active,
@@ -363,3 +366,73 @@ body{
     margin: 0;
 }
 
+/* ---- Tarjeta de Video */
+.card-video{
+    max-width: 300px;
+}
+
+.card-video a{
+    text-decoration: none;
+    color: inherit;
+}
+
+.card-video .cover{
+    position: relative;
+    display: block;
+    aspect-ratio: 16/9;
+    margin-bottom: 0.75rem;
+}
+
+.card-video .time{
+    position: absolute;
+    right: 1rem;
+    bottom: 0.5rem;
+    background-color: rgba(0, 0, 0, 0.8);
+    color: var(--text-color-white);
+    padding: 0 0.25rem;
+    font-size: var(--smaller-font-size);
+    border-radius: var(--border-radius);
+}
+
+.card-video .image{
+    display: block;
+    height: 100%;
+    object-fit: cover;
+}
+
+.card-video .user-avatar{
+    margin-right: 0.75rem;
+    --size:36px;
+}
+
+.card-video .content{
+    font-size: var(--small-font-size);
+    color: var(--text-color-alt);
+}
+
+.card-video .title{
+    color: var(--text-color);
+    margin-bottom: 0.25rem;
+}
+
+/* Informacion del video */
+.video-information{
+
+}
+
+.video-information .views{
+    display: inline-flex;
+}
+
+.video-information .views::after{
+    content: '\e91b';
+    font-family: var(--icon-font);
+    font-size: 0.25rem;
+    padding: 0 0.25rem; 
+}
+
+/* Ocultar header y nav temporal */
+.main-header,
+.main-sidebar{
+    display: none;
+}
