@@ -212,27 +212,51 @@ hr{
 
 /* ACTION BUTTONS */
 
-.action-button{
+.action-button,
+.action-button .icon{
     --size:2.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     height: var(--size);
-    width: var(--size);
-    border-radius: 50%;
+    /* width: var(--size); */
     border: 1px solid transparent;
     background: none;
     cursor:pointer;
     transition: border-color var(--transition-time);
 }
 
-.action-button::before{
+.action-button.has-text{
+    text-transform: uppercase;
+    color: var(--text-color-alt);
+    font-weight: var(--font-bold);
+    font-size: var(--small-font-size);
+}
+
+.action-button.has-text .icon{
+    size: 2.25rem;
+    color: var(--grey-color);
+}
+
+.action-button:not(.has-text),
+.action-button .icon{
+    width: var(--size);
+    border-radius: 50%;
+}
+
+.action-button::before,
+.action-button .icon{
     color: var(--text-color-alt);
     font-size: 1.5rem;
 }
 
 /* Por que aplique el estilo de color y fuente a un pseudoelemento y no a la clase action button */
 
-.action-button:active{
+.action-button:not(.has-text):active,
+.action-button .icon:active{
     background-color: var(--bg-color-active) ;
     border-color: var(--bg-color-active);
+  
 }
 
 /* Tooltip */
@@ -463,13 +487,38 @@ body.video-page{
 }
 
 .video-column{
-    background-color: red;
+   
     grid-column-start: span 8;
 }
 
 .video-player .video{
     aspect-ratio: 16 / 9;
     width: 100%;
+    margin-bottom: 1rem;
+}
+
+.video-player .title{
+    font-weight: normal;
+    font-size: var(--big-font-size);
+}
+
+.video-player .video-information{
+    font-size: var(--small-font-size);
+    color: var(--text-color-alt);
+}
+
+.video-player .actions{
+    display: flex;
+    justify-content: space-between;
+    align-items:center;
+}
+
+.video-player .buttons-container.likes{
+    border-bottom: 2px solid var(--grey-color);
+}
+
+.video-player .border{
+    padding-top: 0;
 }
 
 .cards-sidebar{
