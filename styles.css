@@ -61,7 +61,8 @@ body{
     background-color: var(--bg-color-alt);
     line-height: 1.15rem;
     padding-top: var(--header-height);
-    padding-left: var(--sidebar-width);
+    padding-left: var(--sidebar-width); 
+    
 }
 
 h1,
@@ -441,4 +442,32 @@ hr{
     padding: 1rem 2rem;
     max-width: 1800px;
     margin-inline: auto; 
+}
+
+
+/* ----------------------- */
+/* ----- VIDEO PAGE ------ */
+body.video-page{
+    padding-left: 0;
+}
+
+.video-page-grid{
+    --gap-page:1.5rem;
+    width:calc(100%-(var(--gap-page)*2));
+    max-width: 1600px;
+    display: grid;
+    gap: var(--gap-page);
+    grid-template-columns: repeat(11,1fr);
+    margin-inline: auto;
+    padding-top: var(--gap-page);
+}
+
+.video-column{
+    background-color: red;
+    grid-column-start: span 8;
+}
+
+.cards-sidebar{
+    background-color: blue;
+    grid-column-start: span 3;
 }
