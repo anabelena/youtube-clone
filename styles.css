@@ -467,7 +467,13 @@ body.video-page{
     grid-column-start: span 8;
 }
 
+.video-player .video{
+    aspect-ratio: 16 / 9;
+    width: 100%;
+}
+
 .cards-sidebar{
     background-color: blue;
     grid-column-start: span 3;
 }
+
