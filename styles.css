@@ -442,11 +442,6 @@ hr.big{
   margin: 0;
 }
 
-/* ---- Tarjeta de Video */
-/* .card-video{
-    max-width: 300px;
-} */
-
 .card-video a {
   text-decoration: none;
   color: inherit;
@@ -489,6 +484,33 @@ hr.big{
 .card-video .title {
   color: var(--text-color);
   margin-bottom: 0.25rem;
+}
+
+/* Card video cuando esta en el sidebar  */
+
+.cards-sidebar{
+  display: grid;
+  grid-column-start: span 3;
+  gap: 1rem;
+}
+
+.card-video.in-sidebar{
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 1rem;
+  /* grid-template-columns: repeat(9,1fr); */
+  
+}
+
+.card-video.in-sidebar .cover{
+  margin-bottom: 0;
+  min-width: 200px;
+  max-width: 250px;
+}
+
+.card-video.in-sidebar .content{
+  /* grid-column-start: span 5; */
+  flex-grow: 1;
 }
 
 /* Informacion del video */
@@ -613,7 +635,6 @@ body.video-page {
   margin-bottom: 0.5rem;
 }
 
-
 .comment-form{
   gap: 1rem;
 }
@@ -723,8 +744,4 @@ body{
 }
 
 
-.cards-sidebar {
-  background-color: #909090;
-  grid-column-start: span 3;
-}
 

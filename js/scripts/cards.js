@@ -3,7 +3,6 @@ import { cardVideoSidebar } from "../template/card-video-sidebar.js";
 import { cardData } from "../helpers/get-card-data.js";
 
 
-
 const handleRenderCards = () => {
   // Grid de cards
   const cardsGrid = document.getElementById('card-grid')
@@ -14,8 +13,8 @@ const handleRenderCards = () => {
   // Valida si el grid se encuentra en el sidebar
   // Shavos, no validen así las cosas, no es la mejor manera
   // Pero es un curso de HTML y CSS, no le den mucha importancia
-  // const inSidebar = cardsGrid.classList.contains('cards-sidebar')
-  const inSidebar = cardsGrid.classList.contains('card-grid')
+  const inSidebar = cardsGrid.classList.contains('cards-sidebar')
+  // const inSidebar = cardsGrid.classList.contains('card-grid')
 
   // Agregamos 30 cards
   // ¿Por qué 30? Nada más

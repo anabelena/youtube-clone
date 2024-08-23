@@ -15,4 +15,4 @@ export const cardVideoSidebar = (data) => `
         <span>Hace 2 horas</span>
       </p>
     </div>
-  `
+  `;
