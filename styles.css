@@ -87,6 +87,10 @@ hr {
   border-bottom: 1px solid var(--border-color);
 }
 
+hr.big{
+  margin-bottom: 1rem;
+}
+
 /* FLEX | CENTER elements */
 .place-center {
   display: flex;
@@ -321,6 +325,18 @@ hr {
   border-radius: var(--border-radius);
   cursor: var(--cursor-button);
 }
+
+.button[disabled]{
+  --button-color: var(--bg-color-active);
+  --text-button-color:var(--grey-color);
+  --cursor-button: initial;
+}
+
+.button.link{
+  --text-button-color: var(--text-color-alt) ;
+  --button-color:transparent;
+}
+
 
 /* --- SIDEBAR ---- */
 
@@ -590,7 +606,76 @@ body.video-page {
   font-size: var(--small-font-size);
 }
 
+
+/* ---- Comments section ------ */
+.comments-information{
+  align-items: center;
+}
+
+
+.comment-form{
+  gap: 1rem;
+}
+
+/* Body */
+body{
+  height: 200vh;
+}
+
+.comment-form .form{
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.comment-form .input{
+  position: relative;
+  margin-bottom: 1rem;
+  padding: 0.5rem 0;
+  font-size: var(--small-font-size);
+  box-shadow: 0 -1px inset var(--grey-color);
+  outline: none;
+}
+
+.comment-form .input:empty::before{
+  content:'Agrega un comentario publico';
+  color: var(--text-color-alt);
+}
+
+.comment-form .input:not(:empty) ~ .buttons-container .button[disabled]{
+  background-color: red;
+}
+
+.comment-form .input::after{
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom:0px;
+  left: 50%;
+  background-color: #000;
+  transition: left var(--transition-time), 
+              width var(--transition-time);
+}
+
+.comment-form .input:focus::after{
+  width: 100%;
+  left: 0;
+}
+
+.comment-form .user-avatar{
+  --size:2.5rem;
+}
+
+.comment-form .buttons-container{
+  margin-left: auto;
+}
+
+/* Buttons Container */
+
+
 .cards-sidebar {
-  background-color: blue;
+  background-color: #909090;
   grid-column-start: span 3;
 }
+
