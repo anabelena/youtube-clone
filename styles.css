@@ -671,7 +671,55 @@ body{
   margin-left: auto;
 }
 
-/* Buttons Container */
+/* ---- Componente Comentario ----- */
+.comments-grid{
+  display: grid;
+  gap: 1.5rem;
+}
+
+
+.comment{
+  gap: 1rem;
+  font-size: var(--small-font-size);
+}
+
+.comment .user-avatar{
+  --size:2.5rem;
+}
+
+.comment .header{
+  font-size: var(--smaller-font-size);
+  margin-bottom: 0.25rem;
+}
+
+.comment .name{
+  margin-right: 0.25rem;
+  text-decoration: none;
+  color: var(--text-color);
+}
+
+.comment .time{
+  color: var(--text-color-alt);
+}
+
+.comment .buttons-container{
+  margin-left: -0.5rem;
+}
+
+.comment .action-button,
+.comment .action-button .icon{
+  --size:2rem;
+  font-size: var(--normal-font-size);
+}
+
+.comment .action-button:hover,
+.comment .action-button:hover .icon{
+  color: var(--text-color-alt);
+}
+
+.comment .action-button .text{
+  font-size: var(--smaller-font-size);
+}
 
 
 .cards-sidebar {
