@@ -610,6 +610,7 @@ body.video-page {
 /* ---- Comments section ------ */
 .comments-information{
   align-items: center;
+  margin-bottom: 0.5rem;
 }
 
 
